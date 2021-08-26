@@ -8,10 +8,15 @@ window.addEventListener('load', () => {
     var ctx = tamanioCanvas.getContext('2d');
 
     for(var i = 0; i < numCuadrados; i++){
-        //ctx.fillStyle = "rgba(255, 255, 255, 0.8)"; 
-        ctx.fillStyle = '#FF0000'
-        // (X - Y - W - H)
-        ctx.fillRect(tamanio*i + espacio*i, 0, tamanio, tamanio);
+        if(i%3 == 0){
+            //ctx.fillStyle = "rgba(255, 255, 255, 0.8)"; 
+            ctx.fillStyle = 'red'
+            // (X - Y - W - H)
+            ctx.fillRect(tamanio*i + espacio*i, 0, tamanio, tamanio);
+        } else {
+            ctx.fillStyle = 'green'
+            ctx.fillRect(tamanio*i + espacio*i, 0, tamanio, tamanio);
+        }
     }
 });
 
@@ -24,9 +29,14 @@ window.addEventListener('load', () => {
     var ctx = tamanioCanvas.getContext('2d');
     
     for(var i = 0; i < numCuadrados; i++){
-        ctx.fillStyle = '#FF0000'
-        // (X - Y - W - H)
-        ctx.fillRect(tamanio*i + espacio*i, 0, tamanio, tamanio);
+        if(i%5 == 0){
+            ctx.fillStyle = 'red'
+            // (X - Y - W - H)
+            ctx.fillRect(tamanio*i + espacio*i, 0, tamanio, tamanio);
+        } else {
+            ctx.fillStyle = 'green'
+            ctx.fillRect(tamanio*i + espacio*i, 0, tamanio, tamanio);
+        }
     }
 });
 
