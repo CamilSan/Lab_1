@@ -10,13 +10,20 @@ window.addEventListener('load', () => {
     for(var i = 0; i < numCuadrados; i++){
         if(i%3 == 0){
             //ctx.fillStyle = "rgba(255, 255, 255, 0.8)"; 
-            ctx.fillStyle = 'red'
+            ctx.fillStyle = '#ff0000'
             // (X - Y - W - H)
             ctx.fillRect(tamanio*i + espacio*i, 0, tamanio, tamanio);
         } else {
-            ctx.fillStyle = 'green'
+            ctx.fillStyle = '#008000'
             ctx.fillRect(tamanio*i + espacio*i, 0, tamanio, tamanio);
         }
+    }
+
+    if(ctx.fillStyle == '#ff0000'){
+        $("#btnServ1").show();
+        //return false;
+    } else {
+        $("#btnServ1").hide();
     }
 });
 
@@ -30,14 +37,23 @@ window.addEventListener('load', () => {
     
     for(var i = 0; i < numCuadrados; i++){
         if(i%5 == 0){
-            ctx.fillStyle = 'red'
+            ctx.fillStyle = '#ff0000'
             // (X - Y - W - H)
             ctx.fillRect(tamanio*i + espacio*i, 0, tamanio, tamanio);
         } else {
-            ctx.fillStyle = 'green'
+            ctx.fillStyle = '#008000'
             ctx.fillRect(tamanio*i + espacio*i, 0, tamanio, tamanio);
         }
     }
+
+    $(function(){
+        if(ctx.fillStyle == '#ff0000'){
+            $("#btnServ2").show();
+            //return false;
+        } else {
+            $("#btnServ2").hide();
+        }
+      })
 });
 
 /*
