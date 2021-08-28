@@ -1,10 +1,16 @@
 body {
-  background-color: #e6e6e6;
+  background-color: #211E31;
   font-size: 100%;
-  font-family: "Lato", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-weight: 400;
+  padding-top: 5%;
 }
 
+h1 {
+  color: whitesmoke;
+  display: flex;
+  justify-content: center;
+}
 .padre {
   /*background: yellow;*/
   /*height: 150px;*/
@@ -19,11 +25,12 @@ body {
   box-shadow: 0 0px 10px 0px black;
   text-align: center;
   transition: all 0.25s;
+  border-radius: 10px;
 }
 
 .hijo {
   padding: 0% 1% 1% 1%;
-  background: rgb(149, 208, 248);
+  background: whitesmoke;
   /*width: 400px;*/
 }
 
@@ -32,7 +39,19 @@ body {
   margin: 0px 0px 0px 0px;
   margin-top: 10px;
 }
-
+button{
+  padding: 10px 10px;
+  font-size: 1pc;
+  cursor: pointer;
+  border-style: none;
+  background: #52BE96;
+  box-shadow: none;
+  border-radius: 5%;
+}
+button:hover{
+  box-shadow: 0.2pc  0.2pc  0.2pc  0.2pc #47a581;
+  padding: 15px 15px;
+}
 canvas {
   text-align: center;
   justify-content: center;
